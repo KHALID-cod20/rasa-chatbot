@@ -1,0 +1,6 @@
+{
+  "name": "University Assistant Chatbot",
+  "description": "A modern, responsive web interface for a university chatbot built with Vanilla JavaScript, HTML, and CSS.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

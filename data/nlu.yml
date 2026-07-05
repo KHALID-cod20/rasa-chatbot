@@ -1,0 +1,83 @@
+version: "3.1"
+
+nlu:
+
+- intent: greet
+  examples: |
+    - bonjour
+    - salut
+    - bonsoir
+    - hello
+    - hi
+
+- intent: goodbye
+  examples: |
+    - au revoir
+    - à bientôt
+    - bye
+    - goodbye
+    - à plus
+
+- intent: thank_you
+  examples: |
+    - merci
+    - merci beaucoup
+    - je vous remercie
+    - thanks
+    - c'est gentil
+
+- intent: ask_inscription
+  examples: |
+    - comment faire mon inscription
+    - je veux m'inscrire
+    - quelles sont les étapes d'inscription
+    - procédure d'inscription
+    - inscription universitaire
+
+- intent: ask_filiere
+  examples: |
+    - quelles sont les filières disponibles
+    - je cherche les spécialités
+    - quelles formations propose l'université
+    - liste des filières
+    - domaines d'études
+
+- intent: ask_exam
+  examples: |
+    - quand commencent les examens
+    - quelle est la date des examens
+    - calendrier des examens
+    - planning des examens
+    - période des examens
+
+- intent: ask_schedule
+  examples: |
+    - quels sont les horaires de la scolarité
+    - à quelle heure ouvre l'administration
+    - horaires du service de scolarité
+    - heures d'ouverture
+    - quand est-ce que l'administration est ouverte
+
+- intent: ask_library
+  examples: |
+    - où se trouve la bibliothèque
+    - horaires de la bibliothèque
+    - la bibliothèque est-elle ouverte
+    - accès à la bibliothèque
+    - heures de la bibliothèque
+
+- intent: ask_contact
+  examples: |
+    - comment contacter la scolarité
+    - quel est le numéro de téléphone
+    - je veux l'adresse email
+    - contact administration
+    - comment joindre l'université
+
+- intent: ask_scholarship
+  examples: |
+    - comment demander une bourse
+    - informations sur la bourse
+    - conditions pour obtenir une bourse
+    - aide financière étudiante
+    - bourse universitaire conditions

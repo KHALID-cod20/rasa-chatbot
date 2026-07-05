@@ -1,0 +1,53 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - thank_you
+  - ask_inscription
+  - ask_filiere
+  - ask_exam
+  - ask_schedule
+  - ask_library
+  - ask_contact
+  - ask_scholarship
+  - nlu_fallback
+
+responses:
+
+  utter_greet:
+    - text: "Bonjour ! Je suis votre assistant universitaire. Comment puis-je vous aider ?"
+
+  utter_goodbye:
+    - text: "Au revoir et bonne journée !"
+
+  utter_thank_you:
+    - text: "Avec plaisir ! Si vous avez d'autres questions, je suis là pour vous aider."
+
+  utter_ask_inscription:
+    - text: "Pour vous inscrire, veuillez déposer votre dossier au service de scolarité ou utiliser la plateforme en ligne."
+
+  utter_ask_filiere:
+    - text: "Notre université propose plusieurs filières : Informatique, Mathématiques, Physique, Économie et Gestion."
+
+  utter_ask_exam:
+    - text: "Le calendrier des examens est disponible sur le site officiel de l'université."
+
+  utter_ask_schedule:
+    - text: "Le service de scolarité est ouvert du lundi au vendredi de 08h30 à 16h30."
+
+  utter_ask_library:
+    - text: "La bibliothèque est ouverte du lundi au samedi de 08h00 à 18h00."
+
+  utter_ask_contact:
+    - text: "Vous pouvez contacter la scolarité par téléphone ou par e-mail via le site officiel."
+
+  utter_ask_scholarship:
+    - text: "Les demandes de bourse sont déposées au début de chaque année universitaire."
+
+  utter_default:
+    - text: "Désolé, je n'ai pas compris votre question. Pouvez-vous reformuler ?"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

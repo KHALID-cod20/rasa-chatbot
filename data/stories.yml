@@ -1,0 +1,38 @@
+version: "3.1"
+
+stories:
+
+- story: inscription flow
+  steps:
+    - intent: ask_inscription
+    - action: utter_ask_inscription
+
+- story: filiere flow
+  steps:
+    - intent: ask_filiere
+    - action: utter_ask_filiere
+
+- story: exam flow
+  steps:
+    - intent: ask_exam
+    - action: utter_ask_exam
+
+- story: schedule flow
+  steps:
+    - intent: ask_schedule
+    - action: utter_ask_schedule
+
+- story: library flow
+  steps:
+    - intent: ask_library
+    - action: utter_ask_library
+
+- story: contact flow
+  steps:
+    - intent: ask_contact
+    - action: utter_ask_contact
+
+- story: scholarship flow
+  steps:
+    - intent: ask_scholarship
+    - action: utter_ask_scholarship
