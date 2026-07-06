@@ -36,7 +36,8 @@ stories:
   steps:
     - intent: ask_scholarship
     - action: utter_ask_scholarship
-    - story: test action
+
+- story: greeting flow
   steps:
-  - intent: greet
-  - action: action_hello_world
+    - intent: greet
+    - action: utter_greet
