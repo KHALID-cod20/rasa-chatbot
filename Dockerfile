@@ -5,10 +5,7 @@ WORKDIR /app
 COPY . /app
 
 USER root
-
-RUN echo "===== APP FILES =====" && ls -la /app
-RUN echo "===== MODELS =====" && ls -la /app/models
-
+RUN echo "===== FILES =====" && ls -la /app && echo "===== MODELS =====" && ls -la /app/models || true
 RUN chown -R 1001:1001 /app
 
 USER 1001
