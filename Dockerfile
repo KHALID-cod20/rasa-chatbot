@@ -17,4 +17,4 @@ RUN rasa train && \
 
 ENTRYPOINT []
 
-CMD ["bash", "-c", "rasa run --enable-api --host 0.0.0.0 --port $PORT"]
+CMD ["run", "--enable-api", "--cors", "*", "-p", "$PORT", "-i", "0.0.0.0"]
