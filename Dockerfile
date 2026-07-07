@@ -15,4 +15,4 @@ RUN rasa train && \
     echo "===== MODELS =====" && \
     ls -lah /app/models
 
-CMD ["rasa", "run", "--enable-api", "--host", "0.0.0.0", "--port", "5005"]
+CMD bash -c "rasa run --enable-api --host 0.0.0.0 --port $PORT"
