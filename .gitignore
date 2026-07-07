@@ -5,7 +5,6 @@ __pycache__/
 
 # Rasa
 .rasa/
-models/
 
 # Keras / TensorFlow
 .keras/
