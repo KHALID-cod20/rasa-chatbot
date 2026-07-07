@@ -1,3 +1,4 @@
+# Force rebuild on Railway
 FROM rasa/rasa:3.6.21
 
 LABEL build=6
