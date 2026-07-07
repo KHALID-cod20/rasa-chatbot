@@ -15,6 +15,8 @@ RUN rasa train && \
     echo "===== MODELS =====" && \
     ls -lah /app/models
 
+# تصفير الـ Entrypoint لمنع التداخل مع بارامترات Railway
 ENTRYPOINT []
 
-CMD ["run", "--enable-api", "--cors", "*", "-p", "$PORT", "-i", "0.0.0.0"]
+# تشغيل الأمر كـ Shell Form لتفسير متغير $PORT ديناميكياً وبدون مشاكل
+CMD rasa run --enable-api --cors "*" -p $PORT -i 0.0.0.0
