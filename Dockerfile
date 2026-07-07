@@ -4,19 +4,22 @@ LABEL build=6
 
 WORKDIR /app
 
+# نسخ جميع ملفات المشروع
 COPY . /app
 
 USER root
-RUN chown -R 1001:1001 /app
+# إعطاء صلاحيات التنفيذ لسكريبت التشغيل وضبط ملكية المجلد
+RUN chmod +x /app/start.sh && chown -R 1001:1001 /app
 
 USER 1001
 
+# تدريب الموديل
 RUN rasa train && \
     echo "===== MODELS =====" && \
     ls -lah /app/models
 
-# تصفير الـ Entrypoint لمنع التداخل مع بارامترات Railway
+# تصفير الـ Entrypoint تماماً
 ENTRYPOINT []
 
-# تشغيل الأمر كـ Shell Form لتفسير متغير $PORT ديناميكياً وبدون مشاكل
-CMD rasa run --enable-api --cors "*" -p $PORT -i 0.0.0.0
+# استدعاء سكريبت التشغيل المحمي
+CMD ["/app/start.sh"]
