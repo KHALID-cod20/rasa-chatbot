@@ -4,9 +4,11 @@ WORKDIR /app
 
 COPY . /app
 
+RUN echo "=== MODELS ===" && ls -lah /app/models
+
 USER root
 RUN chown -R 1001:1001 /app
 
 USER 1001
 
-CMD ["run", "--enable-api", "--model", "models/20260707-015207-worried-bright.tar.gz", "-i", "0.0.0.0", "-p", "5005"]
+CMD ["run","--enable-api","--model","/app/models/20260707-015207-worried-bright.tar.gz","--host","0.0.0.0","--port","5005"]
