@@ -5,12 +5,8 @@ WORKDIR /app
 COPY . /app
 
 USER root
-
-RUN echo "===== CHECK APP =====" && ls -la /app
-RUN echo "===== CHECK MODELS =====" && ls -la /app/models
-
 RUN chown -R 1001:1001 /app
 
 USER 1001
 
-CMD ["run", "--enable-api", "-i", "0.0.0.0", "-p", "5005"]
+CMD ["run", "--enable-api", "--model", "models/20260707-015207-worried-bright.tar.gz", "-i", "0.0.0.0", "-p", "5005"]
